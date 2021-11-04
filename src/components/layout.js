@@ -1,55 +1,39 @@
-/**
- * Layout component that queries for data
- * with Gatsby's useStaticQuery component
- *
- * See: https://www.gatsbyjs.com/docs/use-static-query/
- */
+import React from 'react'
+import Navbar from '../components/Navbar'
+import { Grommet, Box } from 'grommet'
 
-import * as React from "react"
-import PropTypes from "prop-types"
-import { useStaticQuery, graphql } from "gatsby"
-
-import Header from "./header"
-import "./layout.css"
-
-const Layout = ({ children }) => {
-  const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }
-  `)
-
-  return (
-    <>
-      <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
-      <div
-        style={{
-          margin: `0 auto`,
-          maxWidth: 960,
-          padding: `0 1.0875rem 1.45rem`,
-        }}
-      >
-        <main>{children}</main>
-        <footer
-          style={{
-            marginTop: `2rem`,
-          }}
-        >
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.com">Gatsby</a>
-        </footer>
-      </div>
-    </>
-  )
+const theme = {
+  global: {
+    font: {
+      family: 'proxima-nova, sans-serif',
+      size: '18px',
+      height: '20px',
+    },
+    colors: {
+      brand: '#faae2b',
+      'accent-1': '#ffa8ba',
+      'accent-2': '#fa5246',
+      'neutral-1': '#f2f7f5',
+      'neutral-2': '#00473e',
+      'neutral-3': '#475d5b',
+    },
+  },
 }
 
-Layout.propTypes = {
-  children: PropTypes.node.isRequired,
+const Layout = ({ children }) => {
+  console.log(children)
+  return (
+    <>
+      <Grommet theme={theme} full>
+        <Box fill>
+          <Navbar></Navbar>
+          <Box direction="row" flex overflow={{ horizontal: 'hidden' }}>
+            {children}
+          </Box>
+        </Box>
+      </Grommet>
+    </>
+  )
 }
 
 export default Layout
