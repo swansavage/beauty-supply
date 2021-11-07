@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { Box, Heading, Text, Button } from 'grommet'
-import { HeroAnimation } from '.'
+import HeroAnimation from '../assets/animations/HeroAnimation'
 
 const Hero = () => {
   return (

@@ -1,5 +1,6 @@
 import React from 'react'
-import { Layout, Hero } from '../components'
+import Layout from '../components/Layout'
+import Hero from '../components/Hero'
 import '../assets/global.css'
 
 const IndexPage = () => {
