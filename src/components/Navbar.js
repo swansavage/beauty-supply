@@ -26,7 +26,7 @@ const Navbar = props => {
           </Heading>
         </Box>
         <Box direction="row" style={{ marginLeft: 'auto' }}>
-          <Button className="nav-toggles" plain label="Toggle color palettes" />
+          <Button className="nav-toggles" plain label="Our services" />
           <Button
             className="nav-toggles"
             plain
