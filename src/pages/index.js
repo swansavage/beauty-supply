@@ -1,12 +1,13 @@
 import React from 'react'
-import Navbar from '../components/Navbar'
-import Layout from '../components/Layout'
-import { Grommet, Box } from 'grommet'
+import { Layout, Hero } from '../components'
+import '../assets/global.css'
 
 const IndexPage = () => {
   return (
     <>
-      <Layout></Layout>
+      <Layout>
+        <Hero></Hero>
+      </Layout>
     </>
   )
 }

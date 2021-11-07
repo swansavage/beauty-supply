@@ -1,13 +1,15 @@
 import React from 'react'
 import Navbar from '../components/Navbar'
 import { Grommet, Box } from 'grommet'
+import styled from 'styled-components'
 
 const theme = {
   global: {
     font: {
       family: 'proxima-nova, sans-serif',
       size: '18px',
-      height: '20px',
+      height: '40px',
+      color: '#00473e',
     },
     colors: {
       brand: '#faae2b',
@@ -21,19 +23,25 @@ const theme = {
 }
 
 const Layout = ({ children }) => {
-  console.log(children)
   return (
-    <>
-      <Grommet theme={theme} full>
+    <Wrapper>
+      <Grommet theme={theme} full="min">
         <Box fill>
           <Navbar></Navbar>
-          <Box direction="row" flex overflow={{ horizontal: 'hidden' }}>
+          <Box direction="row" flex>
             {children}
           </Box>
         </Box>
       </Grommet>
-    </>
+    </Wrapper>
   )
 }
+
+const Wrapper = styled.div`
+  width: 1152px;
+  max-width: 100%;
+  margin: 0 auto;
+  background-color: #f2f7f5;
+`
 
 export default Layout

@@ -1,39 +1,54 @@
-import React, { useState } from 'react'
+import React from 'react'
 import BSLogo from './BSLogo'
-import {
-  Grommet,
-  Box,
-  Collapsible,
-  Button,
-  Heading,
-  Layer,
-  ResponsiveContext,
-} from 'grommet'
-
+import { Box, Heading, Button } from 'grommet'
+import styled from 'styled-components'
 const AppBar = props => (
   <Box
     tag="header"
     direction="row"
     align="center"
-    justify="between"
     background="neutral-1"
-    pad={{ left: 'medium', right: 'small', vertical: 'small' }}
+    pad="medium"
     style={{ zIndex: '1' }}
     {...props}
   />
 )
 
 const Navbar = props => {
-  const [showSidebar, setShowSidebar] = useState(false)
   console.log(props)
   return (
-    <AppBar justify="start">
-      <BSLogo />
-      <Heading level="2" margin="none" color="neutral-2" size="small">
-        Beauty Supply
-      </Heading>
-    </AppBar>
+    <Wrapper>
+      <AppBar>
+        <Box direction="row">
+          <BSLogo />
+          <Heading level="2" margin="none" color="neutral-2" size="small">
+            Beauty Supply
+          </Heading>
+        </Box>
+        <Box direction="row" style={{ marginLeft: 'auto' }}>
+          <Button className="nav-toggles" plain label="Toggle color palettes" />
+          <Button
+            className="nav-toggles"
+            plain
+            label="Get in touch"
+            margin={{ left: 'medium' }}
+          />
+        </Box>
+      </AppBar>
+    </Wrapper>
   )
 }
+
+const Wrapper = styled.div`
+  width: 1152px;
+  max-width: 100%;
+  margin: 0 auto;
+  background-color: #f2f7f5;
+
+  .nav-toggles {
+    color: #00473e;
+    font-weight: 700;
+  }
+`
 
 export default Navbar
