@@ -63,7 +63,7 @@ const Hero = () => {
             justify="start"
             animation={{
               type: 'slideRight',
-              delay: 100,
+              delay: 150,
               duration: 1000,
               size: 'large',
             }}
