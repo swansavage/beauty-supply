@@ -10,6 +10,8 @@
     "babel": "^6.23.0",
     "babel-eslint": "^10.1.0",
     "babel-plugin-styled-components": "^1.13.3",
+    "eslint": "^8.2.0",
+    "eslint-webpack-plugin": "^2.5.4",
     "gatsby": "^4.0.2",
     "gatsby-plugin-gatsby-cloud": "^4.0.0",
     "gatsby-plugin-image": "^2.0.0",
