@@ -1,5 +1,5 @@
 import React from 'react'
-import Navbar from '../components/Navbar.js'
+import Navbar from '../components/navbar.js'
 import { Grommet, Box } from 'grommet'
 import styled from 'styled-components'
 

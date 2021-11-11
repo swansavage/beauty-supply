@@ -1,5 +1,5 @@
 import React from 'react'
-import BSLogo from './BSLogo.js'
+import BSLogo from './bsLogo.js'
 import { Box, Heading, Button } from 'grommet'
 import styled from 'styled-components'
 const AppBar = props => (
